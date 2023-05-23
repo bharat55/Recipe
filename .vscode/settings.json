@@ -1,0 +1,112 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": false
+  },
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.generated.ts, ${capture}.graphql",
+    "*.tsx": "${capture}.generated.ts, ${capture}.graphql",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "tsconfig.json": "tsconfig.*.json"
+  },
+
+  // ESLint
+  "eslint.alwaysShowStatus": true,
+  "eslint.enable": true,
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+  "eslint.lintTask.options": "--ext .js,.jsx,.ts,.tsx,.graphql .",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "graphql"
+  ],
+
+  // File type overrides
+  "files.associations": {
+    "Gemfile": "ruby"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html.erb]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Emmet
+  "emmet.includeLanguages": {
+    "erb": "html",
+    "html.erb": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+
+  // vscode-ruby
+  "ruby.useBundler": true, //run non-lint commands with bundle exec
+  "ruby.useLanguageServer": false, // use the internal language server (see below)
+  "ruby.lint": {
+    "rubocop": {
+      "useBundler": true // enable rubocop via bundler
+    }
+  },
+  "ruby.format": "prettier",
+
+  // Jira
+  "atlascode.bitbucket.enabled": false,
+  "atlascode.jira.enabled": true,
+  "atlascode.jira.explorer.enabled": true,
+  "atlascode.jira.jqlList": [
+    {
+      "enabled": true,
+      "id": "7f0fc3ee-90c8-4582-afed-6c8f3556ae06",
+      "monitor": true,
+      "name": "Open neo Issues (not mine)",
+      "query": "project = NEO AND (assignee is EMPTY OR assignee != currentUser()) AND type != Epic AND resolution = Unresolved order by updated DESC",
+      "siteId": "e9aa5e92-af05-438a-813c-26bd7790fbb5"
+    },
+    {
+      "enabled": true,
+      "id": "04da91e5-ad1a-416c-9440-803b9f79a351",
+      "monitor": true,
+      "name": "My open Issues",
+      "query": "project = NEO AND assignee = currentUser() AND resolution = Unresolved order by updated DESC",
+      "siteId": "e9aa5e92-af05-438a-813c-26bd7790fbb5"
+    }
+  ],
+  "solargraph.useBundler": true
+}

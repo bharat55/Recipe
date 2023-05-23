@@ -1,0 +1,53 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // "name": "Rails (attach)",
+      // "request": "attach",
+      // "remoteHost": "localhost",
+      // "remotePort": "31234",
+      // "showDebuggerOutput": true,
+      // "type": "Ruby"
+
+      "name": "Rails (attach)",
+      "type": "rdbg",
+      "request": "attach",
+      // "debugPort": "${workspaceRoot}/tmp/sockets/rails-debug"
+      "debugPort": "31234"
+    },
+    {
+      "name": "Que (attach)",
+      "request": "attach",
+      "remoteHost": "localhost",
+      "remotePort": "31235",
+      "showDebuggerOutput": true,
+      "type": "Ruby"
+    },
+    {
+      "name": "Sqs (attach)",
+      "request": "attach",
+      "remoteHost": "localhost",
+      "remotePort": "31236",
+      "showDebuggerOutput": true,
+      "type": "Ruby"
+    },
+    {
+      "name": "Rails",
+      "type": "Ruby",
+      "request": "launch",
+      "program": "${workspaceRoot}/bin/rails",
+      "args": ["server", "--port", "3000"]
+    },
+    {
+      "type": "chrome",
+      "name": "http://localhost:3000",
+      "request": "launch",
+      "url": "http://localhost:3000"
+    },
+    {
+      "type": "rdbg",
+      "name": "Attach with rdbg",
+      "request": "attach"
+    }
+  ]
+}

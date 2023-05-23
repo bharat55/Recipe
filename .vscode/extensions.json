@@ -1,0 +1,19 @@
+{
+  "recommendations": [
+    "ms-azuretools.vscode-docker",
+    "p1c2u.docker-compose",
+    "me-dutour-mathieu.vscode-github-actions",
+    "github.vscode-pull-request-github",
+    "wingrunr21.vscode-ruby",
+    "redhat.vscode-yaml",
+    "apollographql.vscode-apollo",
+    "bung87.rails",
+    "castwide.solargraph",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "atlassian.atlascode",
+    "rebornix.ruby",
+    "koichisasada.vscode-rdbg",
+    "mhutchie.git-graph"
+  ]
+}
